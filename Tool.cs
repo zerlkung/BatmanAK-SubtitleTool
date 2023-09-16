@@ -9,7 +9,7 @@ namespace BatAkTool
     {
         public static readonly int GAME_VER = -2132606113;
         public static readonly Endian endian = Endian.Little;
-        public static readonly string EXTENSION = ".xxx";
+        public static readonly string EXTENSION = ".upk";
         public static int Language = 0; // english
 
         public static void Main(string[] args)
@@ -25,7 +25,7 @@ namespace BatAkTool
                 }
                 if (Directory.Exists(args[1]))
                 {
-                    string[] Files = Directory.GetFiles(args[1], "*.xxx",SearchOption.AllDirectories);
+                    string[] Files = Directory.GetFiles(args[1], "*.upk",SearchOption.AllDirectories);
                     if (args[0] == "-e")
                     {
                         foreach (string fileName in Files)

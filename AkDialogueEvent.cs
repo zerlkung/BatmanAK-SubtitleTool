@@ -222,17 +222,17 @@ namespace BatAkTool
         private string RemoveNewLine(string str)
         {
             string ret = str;
-            ret = ret.Replace("\r\n", "<cf>");
-            ret = ret.Replace("\n", "<lf>");
-            ret = ret.Replace("\r", "<cr>");
+            ret = ret.Replace("\r\n", "\r\n");
+            ret = ret.Replace("\n", "\n");
+            ret = ret.Replace("\r", "\r");
             return ret;
         }
         private string AddNewLine(string str)
         {
             string Text = str;
-            Text = Text.Replace("<cf>", "\r\n");
-            Text = Text.Replace("<lf>", "\n");
-            Text = Text.Replace("<cr>", "\r");
+            Text = Text.Replace("\r\n", "\r\n");
+            Text = Text.Replace("\n", "\n");
+            Text = Text.Replace("\r", "\r");
             return Text;
         }
     }
